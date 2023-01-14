@@ -148,5 +148,10 @@ EMAIL_HOST_USER = 'burimabs81@gmail.com'
 EMAIL_HOST_PASSWORD = 'grhkuijabfocgdom'
 EMAIL_USE_TLS = True
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
